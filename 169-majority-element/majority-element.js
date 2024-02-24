@@ -16,8 +16,7 @@ var majorityElement = function(nums) {
             max = res[v];
         }
     })
-    
-    console.log(max)
+
     return Object.keys(res).find(key =>
         res[key] === max);
     
