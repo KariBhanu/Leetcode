@@ -3,10 +3,11 @@
  * @return {boolean}
  */
 var canJump = function(nums) {
-    if(nums.length <= 1)
+     if(nums.length <= 1)
         return true;
-    let maximum = nums[0];
+     let maximum = nums[0];
     for(let i = 0; i < nums.length; i++){
+        console.log(maximum,i,nums[i])
         if(maximum <= i && nums[i] == 0) 
             return false;   
         if(i + nums[i] > maximum){
@@ -15,5 +16,5 @@ var canJump = function(nums) {
         if(maximum >= nums.length-1) 
             return true;
     }
-    return false; 
+    return false;
 };
