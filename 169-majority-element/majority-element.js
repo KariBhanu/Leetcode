@@ -5,6 +5,7 @@
 var majorityElement = function(nums) {
     let res = {};
     let max = 0;
+    let maxKey;
 
     nums.forEach(v=>{
         if(res[v]!=undefined){
@@ -14,10 +15,10 @@ var majorityElement = function(nums) {
         }
         if(max < res[v]){
             max = res[v];
+            maxKey = v;
+            console.log(v)
         }
     })
 
-    return Object.keys(res).find(key =>
-        res[key] === max);
-    
+    return maxKey;
 };
