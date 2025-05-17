@@ -5,7 +5,7 @@
  */
 var searchInsert = function(nums, target) {
     if(target > nums[nums.length - 1]){
-        return nums.length
+        return nums.length;
     }
     if(nums.indexOf(target) !== -1){
         return nums.indexOf(target)
